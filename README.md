@@ -7,43 +7,50 @@
 Tina-Linux for F133/T113/D1-H
 
 
-### Ubuntu18.04 environment [Me used WSL2 Ubuntu-20.04]
-  $ sudo apt-get install build-essential subversion git-core libncurses5-dev zlib1g-dev gawk flex quilt libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs unzip lib32z1 lib32z1-dev lib32stdc++6 libstdc++6 libmpc-dev libgmp-dev -y
+### Ubuntu20.04 environment
+``` sh
+  sudo apt-get install build-essential subversion git-core libncurses5-dev zlib1g-dev gawk flex quilt libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs unzip lib32z1 lib32z1-dev lib32stdc++6 libstdc++6 libmpc-dev libgmp-dev -y
+```
 
 ### SDK download from GitHub
 ``` sh
-  $ git clone  https://github.com/birdtechstep/mangopi-sbc_tina-linux.git Tina-Linux
+  git clone  https://github.com/birdtechstep/mangopi-sbc_tina-linux.git Tina-Linux
 ```
 ``` sh
-  $ cd Tina-Linux/ 
+  cd Tina-Linux/ 
 ```
 ``` sh
-  $ git submodule update --init --recursive
+  git submodule update --init --recursive
 ```
 download the static file
 ``` sh
-  $ wget http://dl.mangopi.org/tina/prebuilt.tar.gz .
+  wget http://dl.mangopi.org/tina/prebuilt.tar.gz .
 ```
 ``` sh
-  $ tar xzvf prebuilt.tar.gz
+  tar xzvf prebuilt.tar.gz
 ```
 ``` sh
-  $ wget http://dl.mangopi.org/tina/dl.tar .
+  wget http://dl.mangopi.org/tina/dl.tar .
 ```
 ``` sh
-  $ tar xvf dl.tar
+  tar xvf dl.tar
 ```
 ``` sh
-  $ wget http://dl.mangopi.org/tina/toolchain/riscv64-linux-x86_64-20200528.tar.xz -P ./lichee/brandy-2.0/tools/toolchain/
+  wget http://dl.mangopi.org/tina/toolchain/riscv64-linux-x86_64-20200528.tar.xz -P ./lichee/brandy-2.0/tools/toolchain/
 ```
 ``` sh
-  $ wget http://dl.mangopi.org/tina/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi.tar.xz -P ./lichee/brandy-2.0/tools/toolchain/
+  wget http://dl.mangopi.org/tina/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi.tar.xz -P ./lichee/brandy-2.0/tools/toolchain/
 ```
 
 ### Compile
-  $ source build/envsetup.sh
-  $ lunch
 ``` sh
+  source build/envsetup.sh
+```
+``` sh
+  lunch
+```
+
+``` console
   You're building on Linux
 
 Lunch menu... pick a combo:

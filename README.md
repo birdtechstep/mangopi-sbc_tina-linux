@@ -1,5 +1,5 @@
 <p align="center">
-<a href=https://twitter.com/mangopi_sbc><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/mangopi_sbc?logo=twitter&style=flat-square"></a>
+<a href=https://twitter.com/BirdTechstep><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/BirdTechstep?logo=twitter&style=flat-square"></a>
 
 </p>
 
@@ -7,12 +7,12 @@
 Tina-Linux for F133/T113/D1-H
 
 
-### Ubuntu18.04 environment 
+### Ubuntu18.04 environment [Me used WSL2 Ubuntu-20.04]
   $ sudo apt-get install build-essential subversion git-core libncurses5-dev zlib1g-dev gawk flex quilt libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs unzip lib32z1 lib32z1-dev lib32stdc++6 libstdc++6 libmpc-dev libgmp-dev -y
 
 ### SDK download from GitHub
 ``` sh
-  $ git clone  https://github.com/mangopi-sbc/Tina-Linux.git
+  $ git clone  https://github.com/birdtechstep/mangopi-sbc_tina-linux.git Tina-Linux
   $ cd Tina-Linux/
   $ git submodule update --init --recursive
 

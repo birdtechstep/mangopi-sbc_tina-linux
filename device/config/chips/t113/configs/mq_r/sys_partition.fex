@@ -60,7 +60,8 @@ size = 16384
 
 [partition]
     name         = rootfs
-    size         = 61440
+;    size         = 61440
+    size         = 81440
     downloadfile = "rootfs.fex"
     user_type    = 0x8000
 

@@ -31,13 +31,69 @@
 	status = "okay";
 };
 
+/* i8080 interface      *
+ * CS use               *
+ * /WR  PD18  LCD_DCLK  *
+ *  RS  PD19  LCD_DE    *
+ * /RD  PD20  LCD_HSYNC *
+ *  CS  PD21  LCD_VSYNC *
+ * RESET                *
+ *                      */
+&I8080_8bit_pins_a {
+	allwinner,pins = "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7", "PD8", \
+					"PD18", "PD19", "PD20", "PD21";
+	allwinner,pname = "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7", "PD8", \
+					"PD18", "PD19", "PD20", "PD21";
+	allwinner,function = "I8080_8bit";
+	allwinner,muxsel = <2>;
+	allwinner,drive = <3>;
+	allwinner,pull = <0>;
+};
+
+&I8080_8bit_pins_b {
+	allwinner,pins = "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7", "PD8", \
+					"PD18", "PD19", "PD20", "PD21";
+	allwinner,pname = "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7", "PD8", \
+					"PD18", "PD19", "PD20", "PD21";
+	allwinner,function = "I8080_8bit_suspend";
+	allwinner,muxsel = <7>;
+	allwinner,drive = <1>;
+	allwinner,pull = <0>;
+};
+
+&I8080_16bit_pins_a {
+	allwinner,pins = "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7", "PD8", \
+					"PD10", "PD11", "PD12", "PD13", "PD14", "PD15", "PD16", "PD17", \
+					"PD18", "PD19", "PD20", "PD21";
+	allwinner,pname = "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7", "PD8", \
+					"PD10", "PD11", "PD12", "PD13", "PD14", "PD15", "PD16", "PD17", \
+					"PD18", "PD19", "PD20", "PD21";
+	allwinner,function = "I8080_16bit";
+	allwinner,muxsel = <2>;
+	allwinner,drive = <3>;
+	allwinner,pull = <0>;
+};
+
+&I8080_16bit_pins_b {
+	allwinner,pins = "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7", "PD8", \
+					"PD10", "PD11", "PD12", "PD13", "PD14", "PD15", "PD16", "PD17", \
+					"PD18", "PD19", "PD20", "PD21";
+	allwinner,pname = "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7", "PD8", \
+					"PD10", "PD11", "PD12", "PD13", "PD14", "PD15", "PD16", "PD17", \
+					"PD18", "PD19", "PD20", "PD21";
+	allwinner,function = "I8080_16bit_suspend";
+	allwinner,muxsel = <7>;
+	allwinner,drive = <1>;
+	allwinner,pull = <0>;
+};
+
 &rgb18_pins_a {
 	allwinner,pins = "PD0", "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7", "PD8", "PD9", \
-	"PD10", "PD11", "PD12", "PD13", "PD14", "PD15", "PD16", "PD17", "PD18", "PD19", \
-	"PD20", "PD21";
+					"PD10", "PD11", "PD12", "PD13", "PD14", "PD15", "PD16", "PD17", \
+					"PD18", "PD19", "PD20", "PD21";
 	allwinner,pname = "PD0", "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7", "PD8", "PD9", \
-	"PD10", "PD11", "PD12", "PD13", "PD14", "PD15", "PD16", "PD17", "PD18", "PD19", \
-	"PD20", "PD21";
+					"PD10", "PD11", "PD12", "PD13", "PD14", "PD15", "PD16", "PD17", \
+					"PD18", "PD19", "PD20", "PD21";
 	allwinner,function = "rgb18";
 	allwinner,muxsel = <2>;
 	allwinner,drive = <3>;
@@ -46,11 +102,11 @@
 
 &rgb18_pins_b {
 	allwinner,pins = "PD0", "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7", "PD8", "PD9", \
-	"PD10", "PD11", "PD12", "PD13", "PD14", "PD15", "PD16", "PD17", "PD18", "PD19", \
-	"PD20", "PD21";
+					"PD10", "PD11", "PD12", "PD13", "PD14", "PD15", "PD16", "PD17", \
+					"PD18", "PD19", "PD20", "PD21";
 	allwinner,pname = "PD0", "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7", "PD8", "PD9", \
-	"PD10", "PD11", "PD12", "PD13", "PD14", "PD15", "PD16", "PD17", "PD18", "PD19", \
-	"PD20", "PD21";
+					"PD10", "PD11", "PD12", "PD13", "PD14", "PD15", "PD16", "PD17", \
+					"PD18", "PD19", "PD20", "PD21";
 	allwinner,function = "rgb18_suspend";
 	allwinner,muxsel = <7>;
 	allwinner,drive = <1>;
